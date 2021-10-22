@@ -5,13 +5,34 @@ AddCSLuaFile( "cl_teammenu.lua" )
 
 include( "shared.lua" )
 
-function PlayerInitialSpawn()
-    ply:ConCommand("team_menu")
-    ply:Spawn()
-    
+function GM:PlayerInitialSpawn(ply)
+    concomand.Run(ply, "team_menu")
 end
 
 function PlayerLoudout()
+    
+    
+end
+
+function team_1(ply)
+    ply:SetTeam(1)
+    ply:StripWeapons()
+    ply:StripAmmo()
+    ply:SetMaxHealth(150)
+    ply:SetHealth(150)
+    ply:SetWalkingSpeed(200)
+    ply:SetRunSpeed(300)
+end
+
+function team_2(ply)
+    ply:SetTeam(2)
+    ply:StripWeapons()
+    ply:StripAmmo()
+    ply:SetMaxHealth(100)
+    ply:SetHealth(100)
+    ply:SetWalkingSpeed(100)
+    ply:SetRunSpeed(200)
+end
 
 
 hook.Add("ShowHelp, "OpenTeamMenu", function()

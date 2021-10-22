@@ -6,10 +6,12 @@ AddCSLuaFile( "cl_teammenu.lua" )
 include( "shared.lua" )
 
 function PlayerInitialSpawn()
-
+    ply:ConCommand("team_menu")
+    ply:Spawn()
+    
 end
 
-
+function PlayerLoudout()
 
 
 hook.Add("ShowHelp, "OpenTeamMenu", function()

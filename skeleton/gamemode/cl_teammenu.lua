@@ -1,4 +1,4 @@
-function TeamMenu()
+function set_team()
     local tmenu = vgui.Create("DFrame")
     tmenu:SetPos(ScrW()/2-175, Scrh()/2-110)
     tmenu:SetSize(400, 250)
@@ -10,6 +10,7 @@ function TeamMenu()
     tmenu:MakePopup()
     tmenu.Paint = function
         draw.RoundedBox(1,1,1,1000,1000,Color(43, 199, 22))
+        draw.SimpleText("-Welcome to HL2RP dead addition -","default,1,1,Color(255,0, 0))
     end
     -- tb1
     local tb1 = vgui.Create("DButton", tmenu)
@@ -46,8 +47,8 @@ function TeamMenu()
     tp1.Paint = function()
         draw.RoundedBox(1,1,1,,400,400Color(255, 0, 0))
     end
+    draw.SimpleText("H","default",50,50,Color(230, 0, 0))
 end   
-
     
 -- team config
 concommand.Add("team_menu, TeamMenu)

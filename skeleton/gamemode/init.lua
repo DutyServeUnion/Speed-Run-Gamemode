@@ -5,17 +5,13 @@ AddCSLuaFile( "cl_teammenu.lua" )
 
 include( "shared.lua" )
 
+function PlayerInitialSpawn()
 
-// Serverside only stuff goes here
-
-/*---------------------------------------------------------
-   Name: gamemode:PlayerLoadout( )
-   Desc: Give the player the default spawning weapons/ammo
----------------------------------------------------------*/
-function GM:PlayerLoadout( pl )
-
-	pl:GiveAmmo( 255,	"Pistol", 		true )
-	
-	pl:Give( "empty_weapon" )
-	
 end
+
+
+
+
+hook.Add("ShowHelp, "OpenTeamMenu", function()
+    concommand.Run(ply,"team_menu")
+end)

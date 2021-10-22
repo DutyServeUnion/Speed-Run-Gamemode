@@ -12,7 +12,7 @@ function TeamMenu()
         draw.RoundedBox(1,1,1,1000,1000,Color(43, 199, 22))
     end
     -- tb1
-    local tb1 = vgui.Create("DBytton", tmenu)
+    local tb1 = vgui.Create("DButton", tmenu)
     tb1:SetPos(15,30)
     tb1:SetSize(160, 170)
     tb1:SetText("Team 1")
@@ -21,6 +21,7 @@ function TeamMenu()
     end
     tb1.DoClick = function()
         tmenu:Close() 
+        concommand.Run(LocalPlayer(),"team_1",)
     end
     -- tb2
    local tb2 = vgui.Create("DBytton", tmenu)
@@ -32,7 +33,8 @@ function TeamMenu()
     end
     
     tb2.DoClick = function()
-        tmenu:Close() 
+        tmenu:Close()
+        concommand.Run(LocalPlayer(),"team_2"
     end
 
     -- tp1 = pannel

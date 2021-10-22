@@ -3,7 +3,7 @@ AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
 AddCSLuaFile( "cl_teammenu.lua" ) 
 
-include( 'shared.lua' )
+include( "shared.lua" )
 
 
 // Serverside only stuff goes here
